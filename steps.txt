@@ -1,0 +1,35 @@
+step one ***
+add html element {
+    <div class="webgl">
+    <div id="container" ></div>
+    </div>
+} 
+
+step two ***
+add to the functions.php new function najiScript
+
+function coffin() {
+    
+	?>
+    //please make sure the source link is a good same link for the file coffinScript.js
+
+	<script type="module" src="http://localhost/wp/three/wp-content/themes/twentytwenty/assets/three-master/coffinScript.js">
+		
+	</script>
+	
+	<?php
+	}
+	
+add_action('wp_enqueue_scripts', 'coffin');
+
+step three ***
+in coffinScript Modification links for image and model
+
+// coffinScript.js file
+//please make sure the source link is a good same link for the image
+// in line 17
+const imageSource = 'http://localhost/wp/three/wp-content/themes/twentytwenty/assets/three-master/Wood_Texture.jpg'
+
+//please make sure the source link is a good same link for the model
+// line 21
+const fairwellkaal = "http://localhost/wp/three/wp-content/themes/twentytwenty/assets/three-master/Fairwell_kaal.gltf"
